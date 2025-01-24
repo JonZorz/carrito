@@ -99,10 +99,6 @@
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
 }
-.img{
-  width="150",
-  height="150"
-}
   </style>
 </head>
 <body>
@@ -110,7 +106,7 @@
     <h1>Lista de Productos</h1>
     <ul>
       <li v-for="product in products" :key="product.id" class="product">
-        <img :src="product.img" :alt="product.title"/>
+        <img :src="product.img" :alt="product.title" height="150" width="150"/>
         <h2>{{ product.title }}</h2>
         <p>Precio: {{ product.price }} €</p>
         <button @click="addToCart(product)">Añadir al carrito</button>
